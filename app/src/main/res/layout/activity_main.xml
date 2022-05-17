@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#607CA2"
+    android:orientation="vertical"
+    android:padding="5dp"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+            android:layout_above="@id/AdView_LinearLayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Manual_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_selector"
+                    android:text="사 용 법"
+                    android:textColor="#BFCADA"
+                    android:textSize="15dp"></Button>
+
+
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="10"
+                    android:background="@drawable/edittext_border">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textMultiLine|textNoSuggestions"
+                        android:hint="변환할 문구를 적어주세요"
+                        android:textColor="#000000"
+                        android:textColorHint="#BFCADA"
+                        android:layout_weight="8"
+                        android:background="@null"
+                        android:textSize="20dp"></androidx.appcompat.widget.AppCompatEditText>
+
+                    <ImageView
+                        android:id="@+id/CutBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/ic_menu_send"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/VoiceBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/ic_btn_speak_now"
+                        android:textSize="15dp"></ImageView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!-- //start 결과보기 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="결과"
+                    android:textColor="#BFCADA"
+                    android:id="@+id/Unfold_result_all_Btn"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector"
+                    android:layout_gravity="right"
+                    android:textSize="15dp"></Button>
+
+            </LinearLayout>
+            <!-- //end 결과보기 버튼 -->
+            <!-- //start 결과 텍스트 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/result_all_LinearLayout">
+
+                <TextView
+                    android:id="@+id/result_all_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_background_off"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:text="여기서 점자가 나옵니다."
+                    android:textSize="15dp"></TextView>
+
+            </LinearLayout>
+            <!-- //end 결과 텍스트 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/Unfold_result_animation_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector"
+                    android:text="연속으로 보기"
+                    android:textColor="#BFCADA"
+                    android:textSize="15dp"></Button>
+
+            </LinearLayout>
+            <!-- //start 점자 12자리 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:id="@+id/result_animation_LinearLayout"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="4"
+                    android:id="@+id/result_animation1_LinearLayout"
+                    android:padding="1sp"
+                    android:orientation="horizontal">
+
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/flipper_jumja0">
+                        <ImageView
+                            android:id="@+id/jumja1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/white" />
+                    </ViewFlipper>
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/flipper_jumja3">
+                        <ImageView
+                            android:id="@+id/Jumja4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/white" />
+                    </ViewFlipper>
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/flipper_jumja6">
+                        <ImageView
+                            android:id="@+id/jumja7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/white" />
+                    </ViewFlipper>
+
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/flipper_jumja9">
+                        <ImageView
+                            android:id="@+id/jumja10"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/white" />
+                    </ViewFlipper>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:id="@+id/result_animation2_LinearLayout"
+                    android:orientation="horizontal">
+
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/flipper_jumja1">
+                        <ImageView
+                            android:id="@+id/jumja2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/white" />
+                    </ViewFlipper>
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/flipper_jumja4">
+                        <ImageView
+                            android:id="@+id/jumja5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/white" />
+                    </ViewFlipper>
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/flipper_jumja7">
+                        <ImageView
+                            android:id="@+id/jumja8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/white" />
+                    </ViewFlipper>
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/flipper_jumja10">
+                        <ImageView
+                            android:id="@+id/jumja11"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/white" />
+                    </ViewFlipper>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:id="@+id/result_animation3_LinearLayout"
+                    android:orientation="horizontal">
+
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/flipper_jumja2">
+                        <ImageView
+                            android:id="@+id/jumja3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/white" />
+                    </ViewFlipper>
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/flipper_jumja5">
+                        <ImageView
+                            android:id="@+id/jumja6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/white" />
+                    </ViewFlipper>
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/flipper_jumja8">
+                        <ImageView
+                            android:id="@+id/jumja9"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/white" />
+                    </ViewFlipper>
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/flipper_jumja11">
+                        <ImageView
+                            android:id="@+id/jumja12"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/white" />
+
+                    </ViewFlipper>
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <!-- //end 점자 12자리 -->
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+        <!-- 광고 레이아웃 -->
+        <LinearLayout
+            android:id="@+id/AdView_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1">
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ad_unit_id">
+            </com.google.android.gms.ads.AdView>
+        </LinearLayout>
+</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 타이틀바 -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#364D6C">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:layout_gravity="right|center_horizontal"
+            android:onClick="mOnClose"></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="사 용 법 "
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:layout_gravity="center_horizontal"></TextView>
+
+    </LinearLayout>
+    <!-- //end 타이틀바 -->
+    <!-- Notice -->
+    <LinearLayout
+        android:padding="24dp"
+        android:orientation="vertical"
+        android:background="#364D6C"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/howtouse"
+            android:background="@drawable/border"
+            android:layout_gravity="top"></ImageView>
+
+    </LinearLayout>
+    <!-- Notice -->
+
+
+</LinearLayout>
