@@ -1,4 +1,14 @@
 # braille_translator
 
 # 점자번역기 설명
-문장을 점자로 변경해주는 어플이다.
+문장을 점자로 변경해주는 어플  
+
+# 플레이스토어 
+업로드되었지만, 구글 애드센스에 문제가 발생해 내려간 상태.  
+
+# 로고 이미지
+![icon](https://user-images.githubusercontent.com/55564114/168932903-d54b283d-e73d-442c-bff3-fac6a9bae98c.png)  
+
+# 사용 이미지
+![scr3](https://user-images.githubusercontent.com/55564114/168933307-0ff49b7e-188e-437a-a8f5-70771815b72e.PNG)  
+
