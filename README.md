@@ -10,5 +10,6 @@
 ![icon](https://user-images.githubusercontent.com/55564114/168932903-d54b283d-e73d-442c-bff3-fac6a9bae98c.png)  
 
 # 사용 이미지
-![scr3](https://user-images.githubusercontent.com/55564114/168933307-0ff49b7e-188e-437a-a8f5-70771815b72e.PNG)  
+<img width="843" alt="점자번역_이미지" src="https://user-images.githubusercontent.com/55564114/168933572-d2d264da-fae9-4133-a74d-27a4ecae2d76.png">
+
 
